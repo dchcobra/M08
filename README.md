@@ -6,8 +6,7 @@ Primero de todo tenemos que abrir el puerto 80 en nuestro servidor
 
 Si el servidor esta alojado en AWS vamos a seguridad --> grupos de seguridad y editamos las reglas de seguridad y abrimos nuestro puerto 80
 
-![image-20201121121157848](C:\Users\david\AppData\Roaming\Typora\typora-user-images\image-20201121121157848.png)
-
+![Screenshot](img/1.jpg)
 ---
 
 Una vez que tenemos el puerto 80 abierto tenemos que asignar a nuestra maquina un DNS para poder acceder desde internet con un nombre (dchcobra.wk).
@@ -25,7 +24,7 @@ Para vincular y configurar nuestro DNS vamos a acceder a https://www.cloudflare.
 
 Una vez que nos hemos registrado correctamente apareceremos en el inicio y le daremos al botón de agregar un sitio.
 
-![image-20201121122159851](C:\Users\david\AppData\Roaming\Typora\typora-user-images\image-20201121122159851.png)
+![Screenshot](img/3.jpg)
 
 Una vez que le damos a agregar un sitio y hemos introducido el nombre del dominio que hemos registrado en Freenom, le damos al panel que es gratis y seguimos poniendo y ponemos la IP con el nombre de dominio y ponemos que sea HTTP.
 
@@ -53,7 +52,7 @@ Una vez que tenemos lo anterior vamos a nuestra maquina y hacemos:
    sudo nano ark.dchcobra.cf.confz
    ```
 
-![image-20201121123918526](C:\Users\david\AppData\Roaming\Typora\typora-user-images\image-20201121123918526.png)
+![Screenshot](img/4.jpg)
 
 4. Habilitamos el fichero para que puedan acceder y reiniciamos el servicio de apache
 
@@ -66,4 +65,4 @@ Una vez que tenemos lo anterior vamos a nuestra maquina y hacemos:
 
 Aquí tenemos que configurarle ark.dchcobra.cf
 
-![image-20201121124026872](C:\Users\david\AppData\Roaming\Typora\typora-user-images\image-20201121124026872.png)
+![Screenshot](img/5.jpg)
