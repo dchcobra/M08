@@ -66,3 +66,7 @@ Una vez que tenemos lo anterior vamos a nuestra maquina y hacemos:
 Aquí tenemos que configurarle test.dchcobra.cf
 
 ![Screenshot](img/5.jpg)
+
+5. FINALIZADO
+
+Una vez que lo hemos hecho al cabo de unos minutos ya podremos acceder a test.dchcobra.cf, si queremos tener otro subdominio repetimos los pasos y asi podriamos tener distintos subdominios en la misma pagina
