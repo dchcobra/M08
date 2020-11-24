@@ -1,4 +1,4 @@
-# SERVIDORES
+# SUBDOMINIOS
 
 ## COMO HACER UN "SUBDOMINIO" (**es**.dominio.es)
 
