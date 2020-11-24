@@ -43,13 +43,13 @@ Una vez que tenemos lo anterior vamos a nuestra maquina y hacemos:
 2. Copiamos el fichero predeterminado y le ponemos el nombre que nosotros queramos segun el DNS
 
    ```bash
-   sudo cp 000-default.conf ark.dchcobra.cf.conf
+   sudo cp 000-default.conf test.dchcobra.cf.conf
    ```
 
 3. Modificamos el fichero que hemos copiado
 
    ```bash
-   sudo nano ark.dchcobra.cf.confz
+   sudo nano test.dchcobra.cf.conf
    ```
 
 ![Screenshot](img/4.jpg)
@@ -57,7 +57,7 @@ Una vez que tenemos lo anterior vamos a nuestra maquina y hacemos:
 4. Habilitamos el fichero para que puedan acceder y reiniciamos el servicio de apache
 
    ```bash
-   sudo a2ensite ark.dchcobra.cf.conf
+   sudo a2ensite test.dchcobra.cf.conf
    sudo service apache2 reload
    ```
 
