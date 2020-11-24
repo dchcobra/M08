@@ -63,6 +63,6 @@ Una vez que tenemos lo anterior vamos a nuestra maquina y hacemos:
 
    
 
-Aquí tenemos que configurarle ark.dchcobra.cf
+Aquí tenemos que configurarle test.dchcobra.cf
 
 ![Screenshot](img/5.jpg)
