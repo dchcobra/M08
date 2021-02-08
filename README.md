@@ -1,72 +1,62 @@
-# SUBDOMINIOS
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-## COMO HACER UN "SUBDOMINIO" (**es**.dominio.es)
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-Primero de todo tenemos que abrir el puerto 80 en nuestro servidor 
+## About Laravel
 
-Si el servidor esta alojado en AWS vamos a seguridad --> grupos de seguridad y editamos las reglas de seguridad y abrimos nuestro puerto 80
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-![Screenshot](img/1.jpg)
----
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Una vez que tenemos el puerto 80 abierto tenemos que asignar a nuestra maquina un DNS para poder acceder desde internet con un nombre (dchcobra.wk).
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-### ¿COMO CONSEGUIR UN DNS? (FREENOM)
+## Learning Laravel
 
-Podemos conseguir un DNS desde distintos sitios de internet, para conseguirlo de manera segura y poder acceder a un dominio gratis vamos a https://www.freenom.com/es/index.html?lang=es .
-Una vez que estamos en la pagina de Freenom y nos hemos registrado buscamos nuestro dominio y si esta disponible lo compramos durante el tiempo que queramos. 
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-Los dominios que acaban .tk, .ml, .cf, .ga y .gq son totalmente gratuitos hasta un periodo de 1 año.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-### ¿COMO VINCULAMOS NUESTRO SERVIDOR AL DNS? (CLOUDFLARE)
+## Laravel Sponsors
 
-Para vincular y configurar nuestro DNS vamos a acceder a https://www.cloudflare.com/dns y nos registraremos.
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-Una vez que nos hemos registrado correctamente apareceremos en el inicio y le daremos al botón de agregar un sitio.
+### Premium Partners
 
-![Screenshot](img/3.jpg)
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/)**
+- **[OP.GG](https://op.gg)**
 
-Una vez que le damos a agregar un sitio y hemos introducido el nombre del dominio que hemos registrado en Freenom, le damos al panel que es gratis y seguimos poniendo y ponemos la IP con el nombre de dominio y ponemos que sea HTTP.
+## Contributing
 
----
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-### CONFIGURACION DE FICHEROS
+## Code of Conduct
 
-Una vez que tenemos lo anterior vamos a nuestra maquina y hacemos:
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-1. Nos movemos a la carpeta donde aparecen las webs disponibles:
+## Security Vulnerabilities
 
-   ```bash
-   cd /etc/apache2/sites.available
-   ```
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-2. Copiamos el fichero predeterminado y le ponemos el nombre que nosotros queramos segun el DNS
+## License
 
-   ```bash
-   sudo cp 000-default.conf test.dchcobra.cf.conf
-   ```
-
-3. Modificamos el fichero que hemos copiado
-
-   ```bash
-   sudo nano test.dchcobra.cf.conf
-   ```
-
-![Screenshot](img/4.jpg)
-
-4. Habilitamos el fichero para que puedan acceder y reiniciamos el servicio de apache
-
-   ```bash
-   sudo a2ensite test.dchcobra.cf.conf
-   sudo service apache2 reload
-   ```
-
-   
-
-Aquí tenemos que configurarle test.dchcobra.cf
-
-![Screenshot](img/5.jpg)
-
-5. FINALIZADO
-
-Una vez que lo hemos hecho al cabo de unos minutos ya podremos acceder a test.dchcobra.cf, si queremos tener otro subdominio repetimos los pasos y asi podriamos tener distintos subdominios en la misma pagina
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
