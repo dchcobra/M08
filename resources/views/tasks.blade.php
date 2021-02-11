@@ -34,6 +34,9 @@
         <!-- Display Validation Errors -->
         @include('common.errors')
 
+        <!-- Category list-->
+        <p><a href="/categoriList">Go to categories</a></p>
+
         <!-- New Task Form -->
         <form action="{{ url('task') }}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
