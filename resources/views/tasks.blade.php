@@ -39,7 +39,7 @@
             {{ csrf_field() }}
             <!-- Task Name -->
             <div class="form-group">
-                <h4>ADD TASKS</h4>
+                <center><h4>ADD TASKS</h4></center>
                 <label for="task" class="col-sm-3 control-label">Task</label>
 
                 <div class="col-sm-4">
