@@ -28,6 +28,8 @@
         }
     </style>
 </head>
+<div class="container">
+    <h1>TASK <small>BY DCHCOBRA</small></h1>
     <div class="panel-body">
         <!-- Display Validation Errors -->
         @include('common.errors')
@@ -35,9 +37,9 @@
         <!-- New Task Form -->
         <form action="{{ url('task') }}" method="POST" class="form-horizontal">
             {{ csrf_field() }}
-
             <!-- Task Name -->
             <div class="form-group">
+                <h4>ADD TASKS</h4>
                 <label for="task" class="col-sm-3 control-label">Task</label>
 
                 <div class="col-sm-4">
@@ -112,5 +114,6 @@
                 </table>
             </div>
         </div>
+</div>
     @endif
 @endsection
