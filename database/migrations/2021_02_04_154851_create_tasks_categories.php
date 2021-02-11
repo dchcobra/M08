@@ -21,9 +21,8 @@ class CreateTasksCategories extends Migration
             $table->timestamps();
         });
 
-        Schema::table('tasks', function (Blueprint $table) {
-            $table->unsignedBigInteger('cat_id')->nullable();
-            $table->foreign('cat_id')->references('id')->on('categories');
+        Schema::table('tasks', function(Blueprint $table) {
+            $table->foreignId('category_id')->constrined()->nullable();
         });
     }
 
@@ -34,6 +33,11 @@ class CreateTasksCategories extends Migration
      */
     public function down()
     {
+        // eliminem FK primer
+        Schema::table('tasks', function(Blueprint $table) {
+            $table->dropColumn('category_id');
+        });
+        // dp eliminem taula
         Schema::dropIfExists('categories');
     }
 }

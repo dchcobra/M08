@@ -40,10 +40,19 @@
             <div class="form-group">
                 <label for="task" class="col-sm-3 control-label">Task</label>
 
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <input type="text" name="name" id="task-name" class="form-control">
                 </div>
+                <div class="col-sm-2">
+                    <!-- OPTION -->   
+                    <select name="categoryTask" class="form-control">
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
+
 
             <!-- Add Task Button -->
             <div class="form-group">
@@ -81,7 +90,11 @@
                                 <td class="table-text">
                                     <div>{{ $task->name }}</div>
                                 </td>
-
+                                <td>
+                                    @if( $task->cat_id )
+                                        <div>{{ $task->category->name }}</div>
+                                    @endif
+                                </td>
                                 <!-- Delete Button -->
                                 <td>
                                     <form action="{{ url('task/'.$task->id) }}" method="POST">
